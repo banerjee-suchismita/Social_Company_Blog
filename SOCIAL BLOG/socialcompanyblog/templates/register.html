@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<style>
+         body{
+			background-image: url("https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=916&q=80");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		ht/*ml {
+    		height: 100%
+		}*/
+	</style>
+	
+	<!-- <h1 style="text-align: center; font-family: sans-serif; color: white">Register today!</h1> -->
+	<br>
+	<form method="POST" style="border-radius: 10px; border:1px solid black; padding:20px; align-content: center; z-index: 1; " class="p-3 mb-2 bg-dark text-white" >
+		<div class="form-group" class="p-3 mb-2 bg-gradient-dark text-white">
+		{{form.hidden_tag()}}
+		<div class = "col-xs-4">
+		{{form.email.label}}	{{form.email(class="form-control")}} <br>
+		</div>
+
+		<div class = "col-xs-4">
+		{{form.username.label}}	{{form.username(class="form-control")}} <br>
+		</div>
+
+		<div class = "col-xs-3">
+		{{form.password.label}}	{{form.password(class="form-control")}} <br>
+		</div>
+
+		<div class = "col-xs-4">
+		{{form.pass_confirm.label}}	{{form.pass_confirm(class="form-control")}} <br>
+		</div>
+	</div>
+		{{form.submit(class="btn btn-primary")}}
+	</form>
+	<br>
+
+
+{% endblock %}
+
+

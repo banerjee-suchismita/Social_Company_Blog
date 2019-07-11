@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<style>
+		body{
+			background-image: url("https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=916&q=80");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+
+
+		html {
+    		height: 100%
+		}
+</style>
+<br><br><br>
+<div class = "container">
+	<form  method = "POST"  class="p-3 mb-2 bg-dark text-white">
+		{{form.hidden_tag()}}
+
+		<div class = "form-group">
+			{{form.title.label(class = "form-control-label")}}
+			{{form.title(class = "form-control form-control-lg")}}
+		</div>
+
+		<div class = "form-group">
+			{{form.text.label(class = "form-control-label")}}
+			{{form.text(class = "form-control form-control-lg")}}
+		</div>
+
+		<div class = "form-group">
+			{{form.submit(class="btn btn-success")}}
+		</div>
+
+	</form>
+</div>
+
+{% endblock %}
+
+<!-- class = "form-group" -->
